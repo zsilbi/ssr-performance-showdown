@@ -3,8 +3,8 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { renderToString } from "vue/server-renderer";
-import { createApp as createH3App } from "h3";
 import {
+  createApp as createH3App,
   createRouter,
   defineEventHandler,
   toNodeListener,
