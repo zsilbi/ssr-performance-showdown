@@ -29,9 +29,7 @@ router.get(
 
     setHeader(event, "Content-Type", "text/html");
 
-    const html = template.replace(`<!-- element -->`, appContent);
-
-    return html;
+    return template.replace(`<!-- element -->`, appContent);
   })
 );
 
@@ -55,8 +53,6 @@ router.get(
 
 h3App.use(router);
 
-const server = createServer(toNodeListener(h3App));
-
-server.listen(3000, () => {
+createServer(toNodeListener(h3App)).listen(3000, () => {
   console.log("Server is running at http://localhost:3000");
 });
